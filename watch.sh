@@ -1,1 +1,0 @@
-sass --watch --no-cache src/index.scss:dist/index.min.css --style compressed

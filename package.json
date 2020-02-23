@@ -1,0 +1,36 @@
+{
+  "name": "bitty-css",
+  "version": "0.1.1",
+  "description": "A very small CSS framework that works without classes. Who said quick prototypes have to be ugly?",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run css:build && npm run css:watch",
+    "css:build": "node-sass src/index.scss dist/index.min.css --output-style compressed",
+    "css:watch": "node-sass -w src/index.scss dist/index.min.css --output-style compressed",
+    "prod": "npm run css:build && npm publish"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kovee98/classy-css.git"
+  },
+  "keywords": [
+    "bitty",
+    "css",
+    "minimal",
+    "prototype",
+    "framework"
+  ],
+  "author": "Joshua Kovalchik",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Kovee98/classy-css/issues"
+  },
+  "homepage": "https://github.com/Kovee98/classy-css#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^4.13.1"
+  }
+}
