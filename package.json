@@ -14,7 +14,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Kovee98/classy-css.git"
+    "url": "https://github.com/Kovee98/bitty-css"
   },
   "keywords": [
     "bitty",
@@ -26,9 +26,9 @@
   "author": "Joshua Kovalchik",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Kovee98/classy-css/issues"
+    "url": "https://github.com/Kovee98/bitty-css/issues"
   },
-  "homepage": "https://github.com/Kovee98/classy-css#readme",
+  "homepage": "https://github.com/Kovee98/bitty-css#readme",
   "dependencies": {},
   "devDependencies": {
     "node-sass": "^4.13.1"
