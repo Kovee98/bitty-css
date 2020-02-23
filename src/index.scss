@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Mono&display=swap');
+
+// Variables
+$primary: rgb(255, 72, 72);
+$white: #fff;
+$offWhite: #ccc;
+
+// Derived variables
+$border: $offWhite;
+
+// Other file imports
+@import 'form.scss';
+
+
+* {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 18px;
+    margin: 0px;
+}
+
+body {
+    background: $white;
+    padding: 32px;
+}
+
+h1, h2, h3, h4, h5, h6, p, 
+input[type=text], select, header,
+article, section, ol, ul {
+    margin-bottom: 16px;
+}
+
+h1 {
+    padding-bottom: 8px;
+    font-size: 3em;
+}
+h2 {
+    padding-bottom: 8px;
+    margin-top: 24px;
+    font-size: 2em;
+}
+h3 {
+    font-size: 1.5em;
+    margin-top: 24px;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1.125em;
+}
+h6 {
+    font-size: 1em;
+}
+
+ul, ol {
+    padding-left: 32px;
+    line-height: 36px;
+}
+
+button {
+    background: $primary;
+    color: $white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+
+    &:hover {
+        background: darken($primary, 20%);
+    }
+}
+
+a {
+    color: $primary;
+}
+
+pre {
+    font-family: 'Ubuntu Mono', monospace;
+    padding: 16px 0;
+    overflow: auto;
+    font-size: 85%;
+    line-height: 1.5;
+    background: #f6f8fa;
+    border-radius: 5px;
+}
+
+header, footer {
+    margin-left: -32px;
+    margin-right: -32px;
+    padding: 16px;
+    background: rgb(75,75,75);
+    color: $white;
+}
+
+header {
+    margin-top: -32px;
+    background: $primary;
+    color: $white;
+}
+footer {
+    margin-bottom: -32px;
+}
+
+article {
+    padding: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.2),
+                0 2px 2px rgba(0,0,0,0.14),
+                0 3px 1px -2px rgba(0,0,0,0.12);
+}
+
+section {
+    padding: 32px 0;
+}

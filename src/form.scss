@@ -1,0 +1,62 @@
+input[type=text], select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid $border;
+}
+
+select {
+    background: transparent;
+}
+
+input[type=checkbox], input[type=radio] {
+    -webkit-appearance: none;
+    background: transparent;
+    border: 1px solid $border;
+    padding: 10px;
+    border-radius: 3px;
+    outline: none;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+input[type=radio] {
+    padding: 0 5px;
+    margin: 2px 0;
+    border-radius: 50%;
+}
+
+/* 25C9, 25CF, 2022, 26AB */
+input[type=radio]:after {
+    content: '\26AB';
+    color: transparent;
+}
+
+input[type=checkbox]:checked {
+    background-color: $primary;
+    border-color: $primary;
+}
+
+input[type=radio]:checked {
+    border: 2px solid $primary;
+    padding: 0.5px 1.5px;
+    margin: 1px 0;
+    line-height: .675;
+}
+/* 2713, 2714 */
+input[type=checkbox]:checked:after {
+    content: '\2714';
+    font-size: 1.5em;
+    color: $white;
+    position: absolute;
+    top: -3px;
+    left: 1px;
+}
+
+input[type=radio]:checked:after {
+    content: '\26AB';
+    color: $primary;
+    font-size: 1.7em;
+    position: relative;
+    top: -1.5px;
+}
