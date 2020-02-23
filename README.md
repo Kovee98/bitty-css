@@ -1,5 +1,5 @@
 # Bitty CSS
-[![install size](https://packagephobia.now.sh/badge?p=bitty-css@0.1.1)](https://packagephobia.now.sh/result?p=bitty-css@0.1.1)
+[![install size](https://packagephobia.now.sh/badge?p=bitty-css)](https://packagephobia.now.sh/result?p=bitty-css)
 > A very small CSS framework that works without classes. Who said quick prototypes have to be ugly?
 
 ### Develop
