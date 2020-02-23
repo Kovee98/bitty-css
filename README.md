@@ -11,8 +11,3 @@
 ```
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bitty-css/dist/index.min.css">
 ```
-
-## Develop
-```
-npm start
-```
