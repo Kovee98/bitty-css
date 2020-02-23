@@ -9,5 +9,5 @@ npm start
 
 ### Use
 ```
-
+<link rel="stylesheet" href="https://unpkg.com/bitty-css@0.1.1/dist/index.min.css">
 ```
