@@ -1,62 +1,63 @@
+@import 'variables.scss';
+
 input[type=text], select {
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid $border;
+    border: 1px solid $borderColor;
 }
 
 select {
-    background: transparent;
+    background: $white;
+    cursor: pointer;
 }
 
-input[type=checkbox], input[type=radio] {
-    -webkit-appearance: none;
-    background: transparent;
-    border: 1px solid $border;
-    padding: 10px;
-    border-radius: 3px;
+*:focus {
     outline: none;
+    box-shadow: 0 0 0 3px lighten($primary, 20%);
+}
+
+input[type=radio],
+input[type=checkbox] {
+    -webkit-appearance: none;
+    background: $white;
+    border: 1px solid $borderColor;
+    padding: 7px;
+    border-radius: 3px;
     display: inline-block;
     position: relative;
     cursor: pointer;
 }
 
 input[type=radio] {
-    padding: 0 5px;
-    margin: 2px 0;
     border-radius: 50%;
 }
-
-/* 25C9, 25CF, 2022, 26AB */
-input[type=radio]:after {
-    content: '\26AB';
-    color: transparent;
+input[type=radio]:checked {
+    border: 5px solid $primary;
+    padding: 3px;
 }
 
 input[type=checkbox]:checked {
     background-color: $primary;
     border-color: $primary;
 }
-
-input[type=radio]:checked {
-    border: 2px solid $primary;
-    padding: 0.5px 1.5px;
-    margin: 1px 0;
-    line-height: .675;
-}
 /* 2713, 2714 */
 input[type=checkbox]:checked:after {
     content: '\2714';
-    font-size: 1.5em;
     color: $white;
     position: absolute;
     top: -3px;
-    left: 1px;
+    left: 0px;
 }
 
-input[type=radio]:checked:after {
-    content: '\26AB';
-    color: $primary;
-    font-size: 1.7em;
-    position: relative;
-    top: -1.5px;
+label {
+    display: block;
+    cursor: pointer;
+}
+
+textarea {
+    display: block;
+    min-height: 3em;
+    height: 5em;
+    border-radius: 5px;
+    resize: vertical;
 }
