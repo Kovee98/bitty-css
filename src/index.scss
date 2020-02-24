@@ -1,21 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Mono&display=swap');
 
-// Variables
-$primary: rgb(255, 72, 72);
-$white: #fff;
-$offWhite: #ccc;
-
-// Derived variables
-$border: $offWhite;
-
-// Other file imports
+// File imports
+@import 'variables.scss';
 @import 'form.scss';
 
-
 * {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: $regular;
     font-size: 18px;
     margin: 0px;
+
+    &::selection {
+        background: $primary;
+        color: $white;
+    }
 }
 
 body {
@@ -23,19 +20,23 @@ body {
     padding: 32px;
 }
 
-h1, h2, h3, h4, h5, h6, p, 
+h1, h2, h3, h4, h5, h6,
 input[type=text], select, header,
-article, section, ol, ul {
-    margin-bottom: 16px;
+article, section, ol, ul, textarea,
+label {
+    margin: 0 0 16px 0;
+}
+
+p {
+    margin: 0 0 8px 0;
 }
 
 h1 {
-    padding-bottom: 8px;
+    padding: 0 0 8px 0;
     font-size: 3em;
 }
 h2 {
-    padding-bottom: 8px;
-    margin-top: 24px;
+    padding: 0 0 8px 0;
     font-size: 2em;
 }
 h3 {
@@ -72,10 +73,14 @@ button {
 
 a {
     color: $primary;
+
+    &:focus {
+        box-shadow: none;
+    }
 }
 
 pre {
-    font-family: 'Ubuntu Mono', monospace;
+    font-family: $mono;
     padding: 16px 0;
     overflow: auto;
     font-size: 85%;
@@ -111,5 +116,5 @@ article {
 }
 
 section {
-    padding: 32px 0;
+    padding: 16px 0;
 }
