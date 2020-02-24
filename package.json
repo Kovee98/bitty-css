@@ -1,6 +1,6 @@
 {
   "name": "bitty-css",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "A very small CSS framework that works without classes. Who said quick prototypes have to be ugly?",
   "main": "dist/index.min.css",
   "scripts": {
