@@ -7,10 +7,11 @@
     "start": "npm run css:build && npm run css:watch",
     "css:build": "node-sass src/index.scss dist/index.min.css --output-style compressed",
     "css:watch": "node-sass -w src/index.scss dist/index.min.css --output-style compressed",
-    "prod": "npm run css:build && npm publish"
+    "css:dist": "npm run css:build && gzip -9 --keep dist/index.min.css",
+    "prod": "npm run css:dist && npm publish"
   },
   "files": [
-    "dist/index.min.css"
+    "dist"
   ],
   "repository": {
     "type": "git",
