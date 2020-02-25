@@ -1,16 +1,17 @@
 {
   "name": "bitty-css",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A very small CSS framework that works without classes. Who said quick prototypes have to be ugly?",
   "main": "dist/index.min.css",
   "scripts": {
     "start": "npm run css:build && npm run css:watch",
     "css:build": "node-sass src/index.scss dist/index.min.css --output-style compressed",
     "css:watch": "node-sass -w src/index.scss dist/index.min.css --output-style compressed",
-    "prod": "npm run css:build && npm publish"
+    "css:dist": "npm run css:build && gzip -9 -kf dist/index.min.css",
+    "prod": "npm run css:dist && npm publish"
   },
   "files": [
-    "dist/index.min.css"
+    "dist"
   ],
   "repository": {
     "type": "git",

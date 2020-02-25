@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.1] - 2020-02-24
+### Changed
+- Greatly reduced the size of the style file
+
+### Removed
+- Separate form.scss file. Seemed unnecessary.
+
 ## [0.2.0] - 2020-02-24
 ### Added
 - Focus outline styling

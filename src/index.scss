@@ -2,46 +2,41 @@
 
 // File imports
 @import 'variables.scss';
-@import 'form.scss';
 
 * {
     font-family: $regular;
     font-size: 18px;
     margin: 0px;
-
-    &::selection {
-        background: $primary;
-        color: $white;
-    }
 }
 
 body {
-    background: $white;
     padding: 32px;
 }
 
-h1, h2, h3, h4, h5, h6,
+button, input[type=checkbox],
+input[type=radio], select, label {
+    cursor: pointer;
+}
+
+h3, h4, h5, h6,
 input[type=text], select, header,
 article, section, ol, ul, textarea,
 label {
     margin: 0 0 16px 0;
 }
 
-p {
-    margin: 0 0 8px 0;
+h1, h2, p {
+    margin: 0 0 16px 0;
 }
 
 h1 {
-    padding: 0 0 8px 0;
     font-size: 3em;
 }
 h2 {
-    padding: 0 0 8px 0;
     font-size: 2em;
 }
 h3 {
     font-size: 1.5em;
-    margin-top: 24px;
 }
 h4 {
     font-size: 1.25em;
@@ -54,17 +49,33 @@ h6 {
 }
 
 ul, ol {
-    padding-left: 32px;
-    line-height: 36px;
+    padding: 0 0 0 32px;
+    line-height: 2;
+}
+
+*:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px lighten($primary, 20%);
+}
+
+button, pre, textarea, article,
+input, select {
+    border-radius: 5px;
+}
+
+select {
+    background: $white;
+}
+
+button, header, footer,
+*::selection {
+    background: $primary;
+    color: $white;
 }
 
 button {
-    background: $primary;
-    color: $white;
     border: none;
-    border-radius: 5px;
     padding: 8px 16px;
-    cursor: pointer;
 
     &:hover {
         background: darken($primary, 20%);
@@ -83,38 +94,73 @@ pre {
     font-family: $mono;
     padding: 16px 0;
     overflow: auto;
-    font-size: 85%;
     line-height: 1.5;
-    background: #f6f8fa;
-    border-radius: 5px;
+    background: darken($white, 6%);
 }
 
 header, footer {
-    margin-left: -32px;
-    margin-right: -32px;
+    margin: -32px -32px 0;
     padding: 16px;
-    background: rgb(75,75,75);
-    color: $white;
 }
 
-header {
-    margin-top: -32px;
-    background: $primary;
-    color: $white;
-}
 footer {
-    margin-bottom: -32px;
-}
-
-article {
-    padding: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 1px 5px rgba(0,0,0,0.2),
-                0 2px 2px rgba(0,0,0,0.14),
-                0 3px 1px -2px rgba(0,0,0,0.12);
+    background: rgb(75,75,75);
+    margin: 0 -32px -32px;
 }
 
 section {
     padding: 16px 0;
+}
+
+/* 
+    Form
+*/
+
+input, select, article {
+    padding: 10px;
+    border: 1px solid $borderColor;
+}
+
+article {
+    padding: 16px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .4);
+}
+
+input[type=radio],
+input[type=checkbox] {
+    -webkit-appearance: none;
+    padding: 8px;
+    border-radius: 4px;
+    position: relative;
+}
+
+input[type=radio] {
+    border-radius: 50%;
+}
+input[type=radio]:checked {
+    border: 5px solid $primary;
+    padding: 4px;
+}
+
+input[type=checkbox]:checked {
+    background: $primary;
+    border-color: $primary;
+}
+/* 2713, 2714 */
+input[type=checkbox]:checked:after {
+    content: '\2714';
+    color: $white;
+    position: absolute;
+    top: -3px;
+    left: 1px;
+}
+
+label, textarea {
+    display: block;
+}
+
+textarea {
+    min-height: 3em;
+    height: 5em;
+    resize: vertical;
 }
