@@ -1,6 +1,6 @@
 # Bitty CSS
 [![install size](https://packagephobia.now.sh/badge?p=bitty-css)](https://packagephobia.now.sh/result?p=bitty-css) [![](https://data.jsdelivr.com/v1/package/npm/bitty-css/badge?style=rounded)](https://www.jsdelivr.com/package/npm/bitty-css)
-> A very small CSS framework that works without classes. Who said quick prototypes have to be ugly?
+A very small CSS framework that works without classes. Who says prototypes have to be ugly?
 
 ## Usage
 ### Unpkg
