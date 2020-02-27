@@ -4,13 +4,13 @@
 @import 'variables.scss';
 
 * {
-    font-family: $regular;
+    font-family: $regularFont;
     font-size: 18px;
     margin: 0px;
 }
 
-body {
-    padding: 32px;
+main {
+    padding: 32px 64px;
 }
 
 button, input[type=checkbox],
@@ -18,15 +18,17 @@ input[type=radio], select, label {
     cursor: pointer;
 }
 
-h3, h4, h5, h6,
-input[type=text], select, header,
-article, section, ol, ul, textarea,
-label {
+h1, h2,h3, h4, h5, h6, p,
+input[type=text], input[type=number],
+select, header,
+article, ol, ul, textarea,
+label, section, div {
     margin: 0 0 16px 0;
 }
 
-h1, h2, p {
-    margin: 0 0 16px 0;
+input[type=text], textarea, table,
+input[type=number] {
+    width: 100%;
 }
 
 h1 {
@@ -68,7 +70,7 @@ select {
 }
 
 button, header, footer,
-*::selection {
+*::selection, th {
     background: $primary;
     color: $white;
 }
@@ -91,32 +93,29 @@ a {
 }
 
 pre {
-    font-family: $mono;
-    padding: 16px 0;
+    font-family: $monoFont;
+    padding: 16px 32px;
     overflow: auto;
     line-height: 1.5;
-    background: darken($white, 6%);
+    background: darken($white, 5%);
 }
 
 header, footer {
-    margin: -32px -32px 0;
-    padding: 16px;
+    padding: 32px;
 }
 
 footer {
     background: rgb(75,75,75);
-    margin: 0 -32px -32px;
 }
 
 section {
-    padding: 16px 0;
+    padding: 16px;
 }
 
 /* 
     Form
 */
-
-input, select, article {
+input, select, article, textarea {
     padding: 10px;
     border: 1px solid $borderColor;
 }
@@ -155,12 +154,24 @@ input[type=checkbox]:checked:after {
     left: 1px;
 }
 
-label, textarea {
+textarea {
     display: block;
+    min-height: 3em;
+    resize: vertical;
 }
 
-textarea {
-    min-height: 3em;
-    height: 5em;
-    resize: vertical;
+/* 
+    Table
+*/
+table {
+    border-collapse: collapse;
+}
+
+td, th {
+    text-align: left;
+    padding: 16px;
+}
+
+tr:nth-child(even) {
+    background: darken($white, 6%);
 }

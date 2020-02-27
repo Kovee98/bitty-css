@@ -1,7 +1,7 @@
 {
   "name": "bitty-css",
-  "version": "0.2.1",
-  "description": "A very small CSS framework that works without classes. Who said quick prototypes have to be ugly?",
+  "version": "1.0.0",
+  "description": "A very small CSS framework that works without classes. Who says prototypes have to be ugly?",
   "main": "dist/index.min.css",
   "scripts": {
     "start": "npm run css:build && npm run css:watch",

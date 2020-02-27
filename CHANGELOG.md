@@ -6,6 +6,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0] - 2020-02-26
+### Added
+- Styles for tables
+- Styles for main element
+- Bottom margin for div
+
+### Changed
+- Primary color to be blue-purple
+- Wording on slogan
+- Width of some form inputs
+- Spacing of radio/checkbox inputs
+
 ## [0.2.1] - 2020-02-24
 ### Changed
 - Greatly reduced the size of the style file
